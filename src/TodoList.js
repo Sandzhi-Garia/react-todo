@@ -3,24 +3,12 @@
 import React from 'react'
 import TodoListItem from './TodoListItem';
 
-
-const todoList= [{
-    id : 1,
-    title : "Homework",
-  }, 
-  {
-    id : 2,
-    title : "Cooking",
-  }, 
-  {
-    id : 3,
-    title : "Going to store",
-  }]
   
-export default function TodoList() {
+export default function TodoList(props) {
+  
   return (
     <ul>
-    {todoList.map(function (listItem){
+    {props.todoList.map(function (listItem){
       return (
        <TodoListItem key={listItem.id} todo={listItem}/>
       );
