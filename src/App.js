@@ -18,13 +18,19 @@ function App() {
     setTodoList([...todoList,newTodo])
 
   }
+
+  function removeTodo(id){
+    console.log(id)
+    const newTodoList = todoList.filter((todo)=>todo.id !== id);
+    setTodoList(newTodoList)
+  }
   console.log(todoList)
   return (
     <>
         <h1>Todo List</h1>
         <AddTodoForm onAddTodo={addTodo}></AddTodoForm>
 
-        <TodoList todoList={todoList}></TodoList>
+        <TodoList todoList={todoList} onRemoveTodo={removeTodo}></TodoList>
 
     </>
 

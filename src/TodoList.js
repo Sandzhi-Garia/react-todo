@@ -10,7 +10,7 @@ export default function TodoList(props) {
     <ul>
     {props.todoList.map(function (listItem){
       return (
-       <TodoListItem key={listItem.id} todo={listItem}/>
+       <TodoListItem onRemoveTodo={props.onRemoveTodo} key={listItem.id} todo={listItem}/>
       );
     })}
     </ul>
