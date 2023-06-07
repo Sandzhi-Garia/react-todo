@@ -5,7 +5,7 @@ import TodoListItem from './TodoListItem';
 
   
 export default function TodoList(props) {
-  
+  console.log(props.todoList)
   return (
     <ul>
     {props.todoList.map(function (listItem){
